@@ -10,9 +10,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/',(req,res)=>{
-    res.render('home');
-})
-
+    res.render('index');
+});
+app.get('/dashboard',(req,res)=>{
+    res.render('dashboard');
+});
+app.get('/profile',(req,res)=>{
+    res.render('profile');
+});
+app.get('/resources',(req,res)=>{
+    res.render('resources');
+});
 app.listen(port,()=>{
     console.log('Listening on port 3000');
-})
+});
